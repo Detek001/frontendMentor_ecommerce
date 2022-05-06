@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+  <link rel="stylesheet" href="public/css/style.css">
+  <title>Frontend Mentor | E-commerce product page | By Denny Tekne</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container nav-stretch nav-border-bottom">
+        <a class="navbar-brand nav-item-flex" href="#">
+          <img src="public/images/logo.svg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-stretch" id="navbarSupportedContent">
+          <ul class="navbar-nav navbar-gap nav-stretch">
+            <li class="nav-item nav-item-flex">
+              <a class="nav-link active" aria-current="page" href="#">Collections</a>
+            </li>
+            <li class="nav-item nav-item-flex">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item nav-item-flex">
+              <a class="nav-link" aria-current="page" href="#">Women</a>
+            </li>
+            <li class="nav-item nav-item-flex">
+              <a class="nav-link" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item nav-item-flex">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a href="/" class="add-to-cart nav-item-flex">
+          <img src="public/images/icon-cart.svg" alt="add-to-cart">
+        </a>          
+        <a href="/" class="avatar nav-item-flex">
+          <img src="public/images/image-avatar.png" alt="avatar-image">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="image-wrapper">
+          <img src="public/images/image-product-1.jpg" alt="" class="active-img">
+          <div class="wrapper-thumbnail-img">
+            <img src="public/images/image-product-1-thumbnail.jpg" alt="" class="thumbnail-img">
+            <img src="public/images/image-product-2-thumbnail.jpg" alt="" class="thumbnail-img">
+            <img src="public/images/image-product-3-thumbnail.jpg" alt="" class="thumbnail-img">
+            <img src="public/images/image-product-4-thumbnail.jpg" alt="" class="thumbnail-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="product-description-wrapper">
+          <p class="subheading">Sneaker Company</p>
+          <h1 class="heading">Fall Limited Edition Sneakers</h1>
+          <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <p class="price">$125.00</p>
+          <p class="discount">50%</p>
+          <p class="prev-price">$250.00</p>
+          <div class="count-wrapper">
+            <a href="" class="minus">
+              <img src="public/images/icon-minus.svg" alt="" class="minus-svg">
+            </a>
+            <span class="number">1</span>
+            <a href="" class="plus">
+              <img src="public/images/icon-plus.svg" alt="" class="plus-svg">
+            </a>              
+          </div>
+          <a href="" class="add-to-cart-button">
+            <img src="public/images/icon-cart.svg" alt="add-to-cart">
+            <span>Add to cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!---
+    <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Denny Tekne</a>.
+  </div>
+  --->
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

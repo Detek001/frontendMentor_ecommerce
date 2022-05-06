@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
+
+
+// PRIMARY COLOR
+$orange:  hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+$primary: $orange;
+
+$custom-primary-colors: (
+  "primary-light": $pale-orange
+);
+ 
+// GRAY COLOR VARIABLES
+
+$very-vark-blue: hsl(220, 13%, 13%);
+$Dark-grayish-blue: hsl(219, 9%, 45%);
+$Grayish-blue: hsl(220, 14%, 75%);
+$Light-grayish-blue: hsl(223, 64%, 98%);
+$lightbox-black: hsla(0, 0%, 0%, 0.75);
+
+// CUSTOMIZE NAVBAR
+
+$link-color: $Grayish-blue;
+$link-decoration: none;
+$link-hover-color: $very-vark-blue; 
+$navbar-brand-margin-end: 3rem;
+
+// CUSTOMIZE BODY COLOR
+$body-color :$Grayish-blue;
+
+$custom-primary-colors: (
+  "primary-light": $pale-orange
+);
+
+$custom-neutral-colors: (
+  "very-vark-blue": $very-vark-blue,
+  "dark-grayish-blue": $Dark-grayish-blue,
+  "Grayish-blue": $Grayish-blue,
+  "Light-grayish-blue": $Light-grayish-blue,
+  "lightbox-black": $lightbox-black
+);
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-primary-colors);
+$theme-colors: map-merge($theme-colors, $custom-neutral-colors);
+
+$font-family-sans-serif: 'Kumbh Sans', sans-serif;
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'

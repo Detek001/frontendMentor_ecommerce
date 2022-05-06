@@ -1,0 +1,31 @@
+@use '../_custom.scss' as *;
+
+.navbar-gap {
+  column-gap: 1rem;
+}
+
+.nav-border-bottom {
+  border-bottom: 1px solid $Grayish-blue;
+}
+
+.nav-item-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-stretch {
+  align-items: stretch !important;
+}
+
+li.nav-item {
+  border-bottom: 5px solid transparent;
+}
+
+li.nav-item:hover {
+  border-bottom: $primary 5px solid;
+  a.nav-link {
+    color: $very-vark-blue;
+  }
+}
+
