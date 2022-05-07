@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
-
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
 
 // PRIMARY COLOR
 $orange:  hsl(26, 100%, 55%);
@@ -33,6 +34,15 @@ $navbar-toggler-focus-width: 0;
 $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
 
+// Offcanvas
+$offcanvas-color: $black;
+$offcanvas-backdrop-bg: $black;
+$offcanvas-backdrop-opacity: .70; 
+$offcanvas-horizontal-width: 75%;
+$btn-close-bg: url("data:image/svg+xml,<svg width='14' height='15' xmlns='http://www.w3.org/2000/svg'><path d='m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z' fill='#{$navbar-light-color}' fill-rule='evenodd'/></svg>");
+$btn-close-focus-shadow: none;
+$offcanvas-padding-y: 0;
+$offcanvas-padding-x: 0;
 // CUSTOMIZE BODY COLOR
 $body-color :$Grayish-blue;
 
@@ -48,8 +58,6 @@ $custom-neutral-colors: (
   "lightbox-black": $lightbox-black
 );
 
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-primary-colors);
