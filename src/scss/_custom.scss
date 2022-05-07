@@ -26,6 +26,12 @@ $link-color: $Grayish-blue;
 $link-decoration: none;
 $link-hover-color: $very-vark-blue; 
 $navbar-brand-margin-end: 3rem;
+$navbar-light-color: $Dark-grayish-blue;
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg width='16' height='15' xmlns='http://www.w3.org/2000/svg'><path d='M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z' fill='#{$navbar-light-color}' fill-rule='evenodd'/></svg>");
+$navbar-light-toggler-border-color: none;
+$navbar-toggler-focus-width: 0;
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
 
 // CUSTOMIZE BODY COLOR
 $body-color :$Grayish-blue;
