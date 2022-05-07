@@ -1,2 +1,14 @@
 @use '../_custom.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
+
+h2 {
+  color: $very-vark-blue;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+

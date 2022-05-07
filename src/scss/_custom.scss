@@ -1,7 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+
+
+
+
 
 // PRIMARY COLOR
 $orange:  hsl(26, 100%, 55%);
@@ -9,17 +11,32 @@ $pale-orange: hsl(25, 100%, 94%);
 
 $primary: $orange;
 
-$custom-primary-colors: (
-  "primary-light": $pale-orange
-);
- 
 // GRAY COLOR VARIABLES
 
 $very-vark-blue: hsl(220, 13%, 13%);
 $Dark-grayish-blue: hsl(219, 9%, 45%);
-$Grayish-blue: hsl(220, 14%, 75%);
+$Grayish-blue: #b6bcc8;
 $Light-grayish-blue: hsl(223, 64%, 98%);
 $lightbox-black: hsla(0, 0%, 0%, 0.75);
+
+// CUSTOMIZE BODY COLOR
+$body-color :$Grayish-blue;
+
+$custom-colors: (
+  "primary-light": $pale-orange,
+  "very-vark-blue": $very-vark-blue,
+  "dark-grayish-blue": $Dark-grayish-blue,
+  "Grayish-blue": $Grayish-blue,
+  "Light-grayish-blue": $Light-grayish-blue,
+  "lightbox-black": $lightbox-black
+);
+
+// Merge the maps
+
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/variables.scss';
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 // CUSTOMIZE NAVBAR
 
@@ -43,25 +60,13 @@ $btn-close-bg: url("data:image/svg+xml,<svg width='14' height='15' xmlns='http:/
 $btn-close-focus-shadow: none;
 $offcanvas-padding-y: 0;
 $offcanvas-padding-x: 0;
-// CUSTOMIZE BODY COLOR
-$body-color :$Grayish-blue;
 
-$custom-primary-colors: (
-  "primary-light": $pale-orange
-);
-
-$custom-neutral-colors: (
-  "very-vark-blue": $very-vark-blue,
-  "dark-grayish-blue": $Dark-grayish-blue,
-  "Grayish-blue": $Grayish-blue,
-  "Light-grayish-blue": $Light-grayish-blue,
-  "lightbox-black": $lightbox-black
-);
-
-
-// Merge the maps
-$theme-colors: map-merge($theme-colors, $custom-primary-colors);
-$theme-colors: map-merge($theme-colors, $custom-neutral-colors);
+//Buttons
+$btn-padding-y: 1rem;  
+$btn-padding-x: 2rem;
+$btn-border-radius: .75rem;
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075);
+$btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125); 
 
 $font-family-sans-serif: 'Kumbh Sans', sans-serif;
 
