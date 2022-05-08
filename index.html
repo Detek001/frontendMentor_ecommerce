@@ -105,12 +105,51 @@
     </div>
   </header>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <section class="product">
+          <div class="row outer-row">
+            <div class="col-12 image-col">
+              <div class="image-wrapper">
+                <img src="public/images/image-product-1.jpg" alt="" class="active-img">
+                <img class="prev" src="public/images/icon-previous.svg" alt="">
+                <img class="next" src="public/images/icon-next.svg" alt="">
+                <button type="button" class="modal-close-button" data-bs-dismiss="modal" aria-label="Close">
+                  <img src="public/images/icon-close.svg" alt="">
+                </button>
+              </div>
+              <div class="image-wrapper">
+                <div class="row thumnail-row">
+                  <div class="col-3 thumbnail-col">
+                    <img src="public/images/image-product-1-thumbnail.jpg" alt="product-thumbnail-1" class="thumbnail-img">
+                  </div>
+                  <div class="col-3 thumbnail-col">
+                    <img src="public/images/image-product-2-thumbnail.jpg" alt="product-thumbnail-2" class="thumbnail-img">
+                  </div>
+                  <div class="col-3 thumbnail-col">
+                    <img src="public/images/image-product-3-thumbnail.jpg" alt="product-thumbnail-3" class="thumbnail-img">
+                  </div>
+                  <div class="col-3 thumbnail-col">
+                    <img src="public/images/image-product-4-thumbnail.jpg" alt="product-thumbnail-4" class="thumbnail-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6"></div>
+          </div>       
+        </section>
+    </div>
+  </div>
+</div>
+
   <main class="container">
     <section class="product">
       <div class="row outer-row">
         <div class="col-12 col-md-6 image-col">
           <div class="image-wrapper">
-            <img src="public/images/image-product-1.jpg" alt="" class="active-img">
+            <img src="public/images/image-product-1.jpg" alt="" class="active-img" data-bs-toggle="modal" data-bs-target="#exampleModal">
           </div>
           <div class="image-wrapper">
             <div class="row thumnail-row">
@@ -132,6 +171,7 @@
         <div class="col-12 col-md-6"></div>
       </div>       
     </section>
+
 
 
 

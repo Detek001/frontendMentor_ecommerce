@@ -5887,9 +5887,9 @@ textarea.form-control-lg {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: none;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 0 solid none;
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -11879,6 +11879,41 @@ textarea.form-control-lg {
 }
 .product .thumbnail-img:hover {
   opacity: 0.5;
+}
+
+.modal-content .image-wrapper {
+  width: 80%;
+  position: relative;
+}
+.modal-content .image-wrapper:last-child {
+  width: 75%;
+}
+.modal-content .image-wrapper .prev {
+  position: absolute;
+  top: 50%;
+  left: -1.15625rem;
+  transform: translateY(-50%);
+  padding: 1rem 1.15625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-content .image-wrapper .next {
+  position: absolute;
+  top: 50%;
+  right: -1.15625rem;
+  transform: translateY(-50%);
+  padding: 1rem 1.15625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-content .image-wrapper .modal-close-button {
+  position: absolute;
+  top: -1.7rem;
+  right: 0.2rem;
+  border: none;
+  background: none;
 }
 
 h2 {
