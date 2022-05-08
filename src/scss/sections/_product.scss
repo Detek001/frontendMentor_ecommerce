@@ -1,30 +1,60 @@
+@use '../_custom.scss' as *;
 .product {
-
-  margin-top: 3rem;
+  @media (min-width: 576px) {
+    margin-top: 3rem;
+  }
 
   .outer-row,
   .inner-image-row,
   .thumnail-row {
     justify-content: center;
-/*     align-items: center; */
+  }
+
+  .image-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+    @media (max-width: 576px) {
+      padding: 0;
+    }
   }
 
   .image-wrapper {
     width: 100%;
-  }
-
-
-  .inner-image-row {
-    row-gap: 2rem;
+    padding: 0 .5rem;
+    &:first-child {
+      margin: 0 -.5rem;
+    }
+    &:last-child {
+      @media (max-width: 576px) {
+        display: none;
+      }
+    }
+    @media (min-width: 576px) {
+      width: 55%;
+    }
   }
 
   .active-img {
     width: 100%;
-    border-radius: 1rem;
+    cursor: pointer;
+    @media (min-width: 576px) {
+      border-radius: .376rem;
+    }
   }
 
   .thumbnail-img {
     width: 100%;
-    border-radius: 1rem;
+    border-radius: .376rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    .active {
+      border: 2px solid $primary;
+    }
+    &:hover {
+      opacity: .5;
+    }
   }
 }
