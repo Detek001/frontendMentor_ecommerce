@@ -93,10 +93,33 @@
   .cart-avatar-wrapper {
     display: flex;
     column-gap: 1.5rem;
+    position: relative;
     @media (min-width: 768px) {
       column-gap: 3rem;
     }
   }
+
+  .add-to-cart-image {
+    position: relative;
+    $amount: 1;
+    $display: block;
+    &::before {
+      content: '#{$amount}';
+      display: $display;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: -.2rem;
+      margin-right: -.4rem;
+      color: $white;
+      background-color: $primary;
+      min-width: 1.3rem;
+      text-align: center;
+      font-size: .6rem;
+      border-radius: 1rem;
+    }
+  }
+
   .avatar {
     width: 3.5rem;
     height: auto;

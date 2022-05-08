@@ -2,24 +2,26 @@
 
 .cart-container {
   position: relative;
+  display: none;
 }
 .cart {
+  display: flex;
+  display: none;
+  flex-direction: column;
   position: absolute;
-  background-color: #fff;  
   right: 0;
   left: 50%;
   top: 100%;
   transform: translateX(-50%); 
   width: 95%;
+  max-width: 400px;
   min-height: 250px;
   max-height: fit-content;
+  background-color: #fff;  
   border: 1px solid transparent;
   border-radius: .75rem;
   box-shadow: 16px 20px 38px -11px rgba(0,0,0,0.44);
-  display: flex;
-  flex-direction: column;
   @media (min-width: 992px) {
-    width: 400px;
     left: unset;
     right: 0;
     top: 100%;
@@ -38,7 +40,6 @@
     border-bottom: 1px solid $Grayish-blue;
     align-items: center;
   }
-
   .cart-body {
     display: flex;
     justify-content: center;
