@@ -1,12 +1,15 @@
 @use '../_custom.scss' as *;
 
 .navbar-custom {
+  flex-direction: column;
   .nav-stretch {
     @media (min-width: 992px) {
       align-items: stretch !important;
     }
   }
   .nav-container {
+    position: relative;
+/*     z-index: 1; */
     @media (min-width: 576px) {
       justify-content: space-around;
     }
@@ -15,7 +18,7 @@
       padding-bottom: 1rem;
     }
     @media (min-width: 992px) {
-      ::after {
+      &::after {
         position: absolute;
         content: "";
         bottom: 0;
@@ -27,6 +30,8 @@
       justify-content: space-between;
     }
   }
+
+
   .navbar-brand {
     @media (max-width: 572px) {
       margin-right: 0;
