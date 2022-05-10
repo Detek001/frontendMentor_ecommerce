@@ -45,18 +45,58 @@
     }
   }
 
-  .thumbnail-img {
-    width: 100%;
+  .thumbnail-wrapper {
     border-radius: .376rem;
     border: 2px solid transparent;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
+    /* TODO: JS implementation of active */
     .active {
       border: 2px solid $primary;
     }
     &:hover {
-      opacity: .5;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #fff, $alpha: 0.5);
+      }
     }
   }
+  .thumbnail-img {
+    width: 100%;
+  }
+
+  .product-description-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subheading {
+    color: $primary;
+    margin-bottom: 1rem;
+  }
+
+  .heading {
+    color: $very-vark-blue;
+    margin-bottom: 1rem;
+  }
+
+  .product-description {
+    margin-bottom: 1rem;
+  }
+
+  .price-discount-wrapper {
+    display: flex;
+    column-gap: .5rem;
+  }
+
+
 }
 
 .modal-content {
@@ -66,33 +106,29 @@
     &:last-child {
       width: 75%;
     }
-    .prev {
+
+    .carousel-button {
+      display: grid;
+      align-items: center;
       position: absolute;
       top: 50%;
-      left: -1.15625rem;
       transform: translateY(-50%);
+      border: none;
       padding: 1rem 1.15625rem;
       background-color: $white;
       border-radius: 50%;
       cursor: pointer;
-      
-    }
-    .next {
-      position: absolute;
-      top: 50%;
-      right: -1.15625rem;
-      transform: translateY(-50%);
-      padding: 1rem 1.15625rem;
-      background-color: $white;
-      border-color: none;
-      background: none;
-      border-radius: 50%;
-      cursor: pointer;      
+      &.prev {
+        left: -1.15625rem;
+      }
+      &.next {
+        right: -1.15625rem;
+      }
     }
 
     .modal-close-button {
       position: absolute;
-      top: -1.7rem;
+      top: -2.5rem;
       right: .2rem;
       border: none;
       background: none;
