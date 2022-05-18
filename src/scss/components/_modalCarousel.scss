@@ -1,0 +1,29 @@
+@use '../_custom.scss' as *;
+
+.image-modal {
+  .carousel-button {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 1rem 1.15625rem;
+    background-color: $white;
+    border-radius: 50%;
+    cursor: pointer;
+    &.prev {
+      left: -1.15625rem;
+    }
+    &.next {
+      right: -1.15625rem;
+    }
+  }
+  .modal-close-button {
+    position: absolute;
+    top: -2.5rem;
+    right: .2rem;
+    border: none;
+    background: none;
+  }
+}

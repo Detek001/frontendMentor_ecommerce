@@ -3,11 +3,11 @@
   @media (min-width: 576px) {
     margin-top: 3rem;
   }
-
   .outer-row,
   .inner-image-row,
   .thumnail-row {
     justify-content: center;
+    row-gap: 1.5rem;
   }
 
   .image-col {
@@ -23,16 +23,58 @@
 
   .image-wrapper {
     width: 100%;
+    /* Mit Vorbehalt */
     padding: 0 .5rem;
     &:first-child {
       margin: 0 -.5rem;
     }
     &:last-child {
-      @media (max-width: 576px) {
+      @media (max-width: 992px) {
         display: none;
       }
     }
-    @media (min-width: 576px) {
+    &.carousel:not(.mobil) {
+      width: 80%;
+      position: relative;
+    }
+    &.carousel-thumbnail-wrapper {
+      width: 75%;
+    }
+
+    &.mobil {
+      @media (min-width: 992px) {
+        display: none;
+      }
+
+      .carousel-button {
+        display: grid;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        padding: 1rem 1.15625rem;
+        background-color: $white;
+        border-radius: 50%;
+        cursor: pointer;
+        &.prev {
+          left: 5%;
+        }
+        &.next {
+          right: 5%;
+        }
+      }
+    }
+
+    &.desktop {
+      display: none;
+      @media (min-width: 992px) {
+        display: unset;
+      }
+    }
+
+
+    @media (min-width: 992px) {
       width: 55%;
     }
   }
@@ -40,7 +82,7 @@
   .active-img {
     width: 100%;
     cursor: pointer;
-    @media (min-width: 576px) {
+    @media (min-width: 992px) {
       border-radius: .376rem;
     }
   }
@@ -51,18 +93,22 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    
     /* TODO: JS implementation of active */
     .active {
       border: 2px solid $primary;
     }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: background-color 200ms ease-in-out;
+    }
     &:hover {
       &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         background-color: rgba($color: #fff, $alpha: 0.5);
       }
     }
@@ -77,14 +123,10 @@
     align-items: center;
   }
 
-  .subheading {
-    color: $primary;
-    margin-bottom: 1rem;
-  }
-
-  .heading {
-    color: $very-vark-blue;
-    margin-bottom: 1rem;
+  .product-description-wrapper {
+    @media (max-width: 992px) {
+      padding: 0 1rem;
+    }
   }
 
   .product-description {
@@ -93,45 +135,78 @@
 
   .price-discount-wrapper {
     display: flex;
-    column-gap: .5rem;
+    align-items: center;
+    column-gap: 1rem;
   }
 
+  p.price {
+    font-size: 2rem;
+    color: $very-vark-blue;
+  }
 
-}
+  p.discount {
+    color: $primary;
+    background-color: $pale-orange;
+    padding: 0.1rem .5rem;
+    border-radius: .376rem
+  }
 
-.modal-content {
-  .image-wrapper {
-    width: 80%;
-    position: relative;
-    &:last-child {
-      width: 75%;
-    }
+  p.prev-price {
+    text-decoration: line-through;
+  }
 
-    .carousel-button {
-      display: grid;
+  .btn-wrapper {
+    display: flex;
+    column-gap: 1rem;
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
       align-items: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border: none;
-      padding: 1rem 1.15625rem;
-      background-color: $white;
-      border-radius: 50%;
-      cursor: pointer;
-      &.prev {
-        left: -1.15625rem;
-      }
-      &.next {
-        right: -1.15625rem;
-      }
-    }
-
-    .modal-close-button {
-      position: absolute;
-      top: -2.5rem;
-      right: .2rem;
-      border: none;
-      background: none;
     }
   }
+
+
+  .count-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 2rem;
+    background-color: $Light-grayish-blue;
+    border-radius: .376rem;
+    color: $very-vark-blue;
+    padding: 1.2rem 0;
+    @media (min-width: 768px) {
+      padding: .6rem 0;
+    }
+    
+
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: $Light-grayish-blue;
+    }
+  }
+
+  .add-to-cart-button {
+    display: flex;
+    column-gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    
+
+    padding: 1.2rem 2rem;
+    @media (min-width: 768px) {
+      padding: .6rem 2rem;
+    }
+    margin-top: 1rem;
+    border-radius: .376rem;
+    border: none;
+    color: #fff;
+    &:hover {
+      background-color: rgba($color: $primary, $alpha: 0.8);
+      box-shadow: -5px 48px 64px -15px rgba($color: $primary, $alpha: 0.5);
+    }
+  }
+
 }
