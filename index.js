@@ -1,3 +1,4 @@
+import "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 import { init } from "./src/script/init.js"
 
 const onload = (callback) => {

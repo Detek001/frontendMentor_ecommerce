@@ -159,7 +159,7 @@
     display: flex;
     column-gap: 1rem;
     flex-direction: column;
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       flex-direction: row;
       align-items: center;
     }
@@ -174,16 +174,48 @@
     background-color: $Light-grayish-blue;
     border-radius: .376rem;
     color: $very-vark-blue;
-    padding: 1.2rem 0;
-    @media (min-width: 768px) {
+    overflow: hidden;
+/*     padding: 1.2rem 0;
+    @media (min-width: 992px) {
       padding: .6rem 0;
+    }    */ 
+
+    span.number {
+      padding: 1.2rem 0;
+      @media (min-width: 992px) {
+        padding: .6rem 0;
+      } 
     }
-    
 
     button {
       border: none;
       cursor: pointer;
       background-color: $Light-grayish-blue;
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &.plus {
+        justify-content: flex-end;
+        margin-right: 1rem;
+      }
+
+      &.minus {
+        margin-left: 1rem;
+        img.minus-svg {
+          margin-top: .5rem;
+        }
+      }
+
+      &.minus, 
+      &.plus {
+        padding: 1.2rem .375rem;
+        @media (min-width: 992px) {
+          padding: .6rem .375rem;
+          margin-right: unset;
+          margin-left: unset;
+        }   
+      }
     }
   }
 

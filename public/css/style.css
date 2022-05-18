@@ -11970,7 +11970,7 @@ textarea.form-control-lg {
   column-gap: 1rem;
   flex-direction: column;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .product .btn-wrapper {
     flex-direction: row;
     align-items: center;
@@ -11984,10 +11984,17 @@ textarea.form-control-lg {
   background-color: hsl(223deg, 64%, 98%);
   border-radius: 0.376rem;
   color: hsl(220deg, 13%, 13%);
+  overflow: hidden;
+  /*     padding: 1.2rem 0;
+      @media (min-width: 992px) {
+        padding: .6rem 0;
+      }    */
+}
+.product .count-wrapper span.number {
   padding: 1.2rem 0;
 }
-@media (min-width: 768px) {
-  .product .count-wrapper {
+@media (min-width: 992px) {
+  .product .count-wrapper span.number {
     padding: 0.6rem 0;
   }
 }
@@ -11995,6 +12002,29 @@ textarea.form-control-lg {
   border: none;
   cursor: pointer;
   background-color: hsl(223deg, 64%, 98%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.product .count-wrapper button.plus {
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+.product .count-wrapper button.minus {
+  margin-left: 1rem;
+}
+.product .count-wrapper button.minus img.minus-svg {
+  margin-top: 0.5rem;
+}
+.product .count-wrapper button.minus, .product .count-wrapper button.plus {
+  padding: 1.2rem 0.375rem;
+}
+@media (min-width: 992px) {
+  .product .count-wrapper button.minus, .product .count-wrapper button.plus {
+    padding: 0.6rem 0.375rem;
+    margin-right: unset;
+    margin-left: unset;
+  }
 }
 .product .add-to-cart-button {
   display: flex;
