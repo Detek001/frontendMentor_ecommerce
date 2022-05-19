@@ -1,3 +1,5 @@
+import { operators } from "./utilities/operators.js"
+
 export const registerCounterButton = () => {
   
   const getItems = (datattr) => {
@@ -7,17 +9,9 @@ export const registerCounterButton = () => {
   const executeOperation = (operation) => {
     let number = document.querySelector(".number")
     let currentValue = parseInt(number.textContent)
+    currentValue =  operators[operation](currentValue, 1)
 
-    if(operation == "minus") {
-      currentValue -= 1
-    } else {
-      currentValue += 1
-    }
-    if (currentValue < 1) {
-      return number.textContent = 1
-    } else {
-      return number.textContent = currentValue
-    }
+    return currentValue > 1 ? number.textContent = currentValue : number.textContent = 1
   }
 
   const eventListener = () => {

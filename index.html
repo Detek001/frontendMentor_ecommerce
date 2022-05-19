@@ -59,12 +59,13 @@
           <div class="cart-body">
             <div class="content">
               <div class="selected-product">
-                <img src="public/images/image-product-1.jpg" alt="" class="cart-img">
+                <img data-product-image src="" alt="" class="cart-img">
                 <div class="text">
-                  <p>Fall Limited Edition Sneakers</p>
-                  <p>$125.00 * 3<span>$375.00</span></p>
+                  <p data-product-title></p>
+                  <p data-price-amount></p>
+                  <p data-sum-sum></p>
                 </div>
-                <img src="public/images/icon-delete.svg" alt="" class="active-img">
+                <img src="public/images/icon-delete.svg" alt="product-image" class="active-img">
               </div>
               <div class="checkout-button">
                 <a href="" class="btn btn-primary custom-button">CHECKOUT</a>
@@ -237,11 +238,11 @@
             <p class="prev-price">$250.00</p>
             <div class="btn-wrapper">
               <div class="count-wrapper">
-                <button type="button"class="minus" data-counter-button="minus">
+                <button type="button"class="minus" data-counter-button="-">
                   <img src="public/images/icon-minus.svg" alt="" class="minus-svg">
                 </button>
                 <span class="number">1</span>
-                <button type="button" class="plus" data-counter-button="plus">
+                <button type="button" class="plus" data-counter-button="+">
                   <img src="public/images/icon-plus.svg" alt="" class="plus-svg">
                 </button>              
               </div>
