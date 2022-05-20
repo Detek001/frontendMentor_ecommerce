@@ -1,4 +1,5 @@
 @use '../_custom.scss' as *;
+@use '../components/cart.scss' as *;
 
 .navbar-custom {
   flex-direction: column;
@@ -101,11 +102,12 @@
 
   .add-to-cart-image {
     position: relative;
-    $amount: 1;
-    $display: block;
+    --amount: "";
+    --opacity: 0;
     &::before {
-      content: '#{$amount}';
-      display: $display;
+      opacity: var(--opacity);
+      content: var(--amount);
+      transition: opacity 50ms ease-in-out;
       position: absolute;
       top: 0;
       right: 0;
