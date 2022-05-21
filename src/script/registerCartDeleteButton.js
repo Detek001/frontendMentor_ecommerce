@@ -1,21 +1,19 @@
+import { getItems } from "./utilities/getItems.js"
+
 export const registerCartDeleteButton = () => {
-  const getItem = () => {
-    return document.querySelector(".cart-delete-button")
-  }
 
   const deleteCart = () => {
-    document.querySelector(".content").classList.add("display-none")
-    document.querySelector(".empty").classList.remove("display-none")
-    const addToCart = document.querySelector("[data-nav-cart]")
+    getItems(".content").classList.toggle("display-none")
+    getItems(".empty").classList.toggle("display-none")
+    const addToCart = getItems("[data-nav-cart]")
     addToCart.style.setProperty('--opacity', 0) 
   }
 
   const eventListener = () => {
-    deleteCartButton.addEventListener("click", (e) => {
+    const deleteCartButton = getItems(".cart-delete-button")
+    deleteCartButton.addEventListener("click", () => {
       deleteCart()
     })
   }
-
-  const deleteCartButton = getItem()
   eventListener()
 }

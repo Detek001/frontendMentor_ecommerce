@@ -1,13 +1,10 @@
 import { operators } from "./utilities/operators.js"
+import { getItems } from "./utilities/getItems.js"
 
 export const registerCounterButton = () => {
-  
-  const getItems = (datattr) => {
-    return document.querySelectorAll(datattr)
-  }
 
   const executeOperation = (operation) => {
-    let number = document.querySelector(".number")
+    let number = getItems(".number")
     let currentValue = parseInt(number.textContent)
     currentValue =  operators[operation](currentValue, 1)
 
@@ -15,15 +12,13 @@ export const registerCounterButton = () => {
   }
 
   const eventListener = () => {
+    const counterButtons = getItems("[data-counter-button]")
     counterButtons.forEach(button => {
       button.addEventListener("click", (e) => {
         const operation = e.currentTarget.dataset.counterButton
         executeOperation(operation)
-        
       })
     })
   }
-
-  const counterButtons = getItems("[data-counter-button]")
   eventListener()
 }
