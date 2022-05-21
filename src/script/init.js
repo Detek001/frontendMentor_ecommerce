@@ -1,13 +1,13 @@
-import { registerCounterButton } from "./registerCounterButton.js"
-import {registerCartButton} from "./registerCartButton.js"
+import { registerAmountButton } from "./registerAmountButton.js"
+import {registerAddToCartButton} from "./registerAddToCartButton.js"
 import { registerCart } from "./registerCart.js"
 import {registerCartDeleteButton} from "./registerCartDeleteButton.js"
-import { registerthumbnailToggler } from "./registerthumbnailToggler.js"
+import { registerThumbnailToggler } from "./registerThumbnailToggler.js"
 
 export const init = () => {
-  registerCounterButton()
-  registerCartButton()
+  registerAmountButton()
+  registerAddToCartButton()
   registerCart()
   registerCartDeleteButton()
-  registerthumbnailToggler()
+  registerThumbnailToggler()
 }

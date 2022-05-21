@@ -1,6 +1,6 @@
 import { getItems } from "./utilities/getItems.js"
 
-export const registerthumbnailToggler = () => {
+export const registerThumbnailToggler = () => {
 
   const parseData = (data) => {
     return data.split("-")[0]

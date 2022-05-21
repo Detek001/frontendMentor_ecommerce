@@ -5,7 +5,7 @@ export const registerCart = () => {
     document.addEventListener("click", (e) => {
       let clickedElement = e.target
       const cartContainer = getItems(".cart-container")
-     
+
       if(clickedElement.closest(".add-to-cart")) {
         cartContainer.classList.toggle("opacity")
       } else if (clickedElement.closest(".cart-container") || clickedElement.closest(".btn-wrapper")) {

@@ -1,7 +1,7 @@
 import { operators } from "./utilities/operators.js"
 import { getItems } from "./utilities/getItems.js"
 
-export const registerCounterButton = () => {
+export const registerAmountButton = () => {
 
   const executeOperation = (operation) => {
     let number = getItems(".number")

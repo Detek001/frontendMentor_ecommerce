@@ -2,7 +2,7 @@ import { data } from "./data.js"
 import { operators } from "./utilities/operators.js"
 import { getItems } from "./utilities/getItems.js"
 
-export const registerCartButton = () => {
+export const registerAddToCartButton = () => {
 
   const getAmount = () => {    
     const amount = "'" + getItems(".number").textContent + "'"
