@@ -17,6 +17,8 @@ export const registerCartButton = () => {
   const saveData = () => {
     const currentValue = document.querySelector(".number").textContent
     const sum = operators['*'](data[0].current_price, parseInt(currentValue))
+    document.querySelector(".content").classList.remove("display-none")
+    document.querySelector(".empty").classList.add("display-none")
     document.querySelector("[data-product-title]").textContent = data[0].product_title 
     document.querySelector("[data-price-amount]").textContent = data[0].current_price + "x" + currentValue
     document.querySelector("[data-sum-sum]").textContent = sum

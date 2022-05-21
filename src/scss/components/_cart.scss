@@ -2,11 +2,13 @@
 
 .cart-container {
   position: relative;
-  --opacity: 0;
+  transition: opacity 100ms ease-in-out;
+  &.opacity {
+    opacity: 0;
+  }
 }
 .cart {
   display: flex;
-  opacity: var(--opacity);
   flex-direction: column;
   position: absolute;
   right: 0;
@@ -45,9 +47,6 @@
     align-items: center;
     flex-grow: 1;
   }
-  .content {
-    opacity: var(--opacity);
-  }
 
   .selected-product {
     display: flex;
@@ -66,6 +65,11 @@
     }
   }
 
+  .cart-delete-button {
+    border: none;
+    background: none;
+  }
+
   .checkout-button {
     display: flex;
     align-items: center;
@@ -78,7 +82,10 @@
       color: #fff;
     }
   }
-  .empty {
-    opacity: var(--opacity);
-  }
 }
+
+.display-none {
+  display: none;
+}
+
+

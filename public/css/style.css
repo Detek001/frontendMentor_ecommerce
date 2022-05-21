@@ -11657,12 +11657,14 @@ textarea.form-control-lg {
 }
 .cart-container {
   position: relative;
-  --opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+.cart-container.opacity {
+  opacity: 0;
 }
 
 .cart {
   display: flex;
-  opacity: var(--opacity);
   flex-direction: column;
   position: absolute;
   right: 0;
@@ -11702,9 +11704,6 @@ textarea.form-control-lg {
   align-items: center;
   flex-grow: 1;
 }
-.cart .content {
-  opacity: var(--opacity);
-}
 .cart .selected-product {
   display: flex;
   align-items: center;
@@ -11719,6 +11718,10 @@ textarea.form-control-lg {
   margin-left: 0.5rem;
   color: #000;
 }
+.cart .cart-delete-button {
+  border: none;
+  background: none;
+}
 .cart .checkout-button {
   display: flex;
   align-items: center;
@@ -11729,8 +11732,9 @@ textarea.form-control-lg {
   width: 100%;
   color: #fff;
 }
-.cart .empty {
-  opacity: var(--opacity);
+
+.display-none {
+  display: none;
 }
 
 .navbar-custom {
@@ -11843,6 +11847,10 @@ textarea.form-control-lg {
   .navbar-custom .cart-avatar-wrapper {
     column-gap: 3rem;
   }
+}
+.navbar-custom button.add-to-cart {
+  background: none;
+  border: none;
 }
 .navbar-custom .add-to-cart-image {
   position: relative;
@@ -11995,9 +12003,8 @@ textarea.form-control-lg {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  /* TODO: JS implementation of active */
 }
-.product .thumbnail-wrapper .active {
+.product .thumbnail-wrapper.active {
   border: 2px solid hsl(26deg, 100%, 55%);
 }
 .product .thumbnail-wrapper::after {

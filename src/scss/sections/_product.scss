@@ -94,8 +94,7 @@
     position: relative;
     cursor: pointer;
     
-    /* TODO: JS implementation of active */
-    .active {
+    &.active {
       border: 2px solid $primary;
     }
     &::after {
