@@ -11669,8 +11669,9 @@ textarea.form-control-lg {
   position: absolute;
   right: 0;
   left: 50%;
-  top: 100%;
+  top: 1rem;
   transform: translateX(-50%);
+  z-index: 1;
   width: 95%;
   max-width: 400px;
   min-height: 250px;
@@ -11714,9 +11715,25 @@ textarea.form-control-lg {
   border-radius: 0.5rem;
   width: 20%;
 }
+.cart .selected-product .text {
+  font-size: 0.786rem;
+}
+.cart .selected-product .text p + p,
+.cart .selected-product .text p:last-child {
+  display: inline;
+}
+.cart .selected-product .text p:last-child {
+  margin-left: 0.25rem;
+  color: hsl(220deg, 13%, 13%);
+}
 .cart .selected-product .text span {
   margin-left: 0.5rem;
   color: #000;
+}
+@media (min-width: 576px) {
+  .cart .selected-product .text {
+    font-size: 1rem;
+  }
 }
 .cart .cart-delete-button {
   border: none;
@@ -12073,10 +12090,7 @@ textarea.form-control-lg {
   border-radius: 0.376rem;
   color: hsl(220deg, 13%, 13%);
   overflow: hidden;
-  /*     padding: 1.2rem 0;
-      @media (min-width: 992px) {
-        padding: .6rem 0;
-      }    */
+  touch-action: manipulation;
 }
 .product .count-wrapper span.number {
   padding: 1.2rem 0;

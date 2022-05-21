@@ -13,8 +13,9 @@
   position: absolute;
   right: 0;
   left: 50%;
-  top: 100%;
+  top: 1rem;
   transform: translateX(-50%); 
+  z-index: 1;
   width: 95%;
   max-width: 400px;
   min-height: 250px;
@@ -58,9 +59,23 @@
       width: 20%;
     }
     .text {
+      font-size: .786rem;
+      p + p, 
+      p:last-child {
+        display: inline;
+      }
+
+      p:last-child {
+        margin-left: .25rem;
+        color: $very-vark-blue;
+      }
+
       span {
         margin-left: .5rem;
         color: $black;
+      }
+      @media (min-width: 576px) {
+        font-size: 1rem;
       }
     }
   }

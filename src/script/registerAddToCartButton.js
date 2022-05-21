@@ -21,7 +21,7 @@ export const registerAddToCartButton = () => {
     getItems(".content").classList.remove("display-none")
     getItems(".empty").classList.add("display-none")
     getItems("[data-product-title]").textContent = data[0].product_title 
-    getItems("[data-price-amount]").textContent = data[0].current_price + "x" + currentValue
+    getItems("[data-price-amount]").textContent = "$" + data[0].current_price + " x " + currentValue
     getItems("[data-sum-sum]").textContent = "$" +  sum
     getItems("[data-product-image]").setAttribute("src", data[0].image)
   }
