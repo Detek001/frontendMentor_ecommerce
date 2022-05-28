@@ -193,16 +193,10 @@
         p + p, 
         p:last-child {
           display: inline;
-        }
-  
+        }  
         p:last-child {
           margin-left: .25rem;
           color: $very-vark-blue;
-        }
-  
-        span {
-          margin-left: .5rem;
-          color: $black;
         }
         @media (min-width: 576px) {
           font-size: 1rem;

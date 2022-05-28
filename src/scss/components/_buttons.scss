@@ -49,8 +49,9 @@ button {
 }
 
 .count-wrapper {
-  justify-content: space-around;
-  column-gap: 2rem;
+  min-width: 7.5rem;
+/*   justify-content: space-around;
+  column-gap: 2rem; */
   background-color: $Light-grayish-blue;
   color: $very-vark-blue;
   margin-top: 1rem;
@@ -61,6 +62,8 @@ button {
     padding: 1.2rem 0;
     @media (min-width: 992px) {
       padding: .6rem 0;
+      width: 100%;
+      text-align: center;
     } 
   }
   .btn-count {
@@ -81,7 +84,7 @@ button {
     &.plus {
       padding: 1.2rem .375rem;
       @media (min-width: 992px) {
-        padding: .6rem .375rem;
+        padding: .6rem .675rem;
         margin-right: unset;
         margin-left: unset;
       }   
@@ -101,7 +104,9 @@ button {
   }
   &:hover {
     background-color: rgba($color: $primary, $alpha: 0.8);
-    box-shadow: -5px 48px 64px -15px rgba($color: $primary, $alpha: 0.5);
+    @media (min-width: 576px) {
+      box-shadow: -5px 48px 64px -15px rgba($color: $primary, $alpha: 0.5);
+    }    
   }
 }
 .checkout-button {
