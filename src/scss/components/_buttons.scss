@@ -4,6 +4,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .carousel-button {
@@ -57,7 +58,6 @@ button {
   margin-top: 1rem;
   overflow: hidden;
   touch-action: manipulation;
-
   span.number {
     padding: 1.2rem 0;
     @media (min-width: 992px) {
@@ -116,6 +116,7 @@ button {
   .custom-button {
     width: 100%;
     color: $white;
+    font-weight: 700;
   }
 }
 

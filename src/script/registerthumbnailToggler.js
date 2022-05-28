@@ -42,6 +42,9 @@ export const registerThumbnailToggler = () => {
       })
     })
   }
+  eventListener()
+/* 
+  ######  actually don't needed ######
 
   const carouselListener = () => {
     const carousel = getItems("[data-modal-carousel")
@@ -49,7 +52,8 @@ export const registerThumbnailToggler = () => {
       const data = e.relatedTarget.dataset.carouselItem
       removeActiveClass(data, thumbnailImages, "thumbnailItem")
     })
-  }  
-  eventListener()
-  carouselListener()
+  } 
+
+  ######  actually don't needed ######
+*/
 }

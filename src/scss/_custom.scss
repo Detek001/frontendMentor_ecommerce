@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@400;700&display=swap');
 $font-family-sans-serif: 'Kumbh Sans', sans-serif;
 
 // PRIMARY COLOR
@@ -7,15 +7,16 @@ $orange:  hsl(26, 100%, 55%);
 $pale-orange: hsl(25, 100%, 94%);
 $primary: $orange;
 
+
 // GRAY COLOR VARIABLES
-$very-vark-blue: hsl(220, 13%, 13%);
+$very-vark-blue: hsl(218, 12%, 13%);
 $Dark-grayish-blue: hsl(219, 9%, 45%);
 $Grayish-blue: #b6bcc8;
 $Light-grayish-blue: hsl(223, 64%, 98%);
 $lightbox-black: hsla(0, 0%, 0%, 0.75);
 
 // CUSTOMIZE BODY COLOR
-$body-color :$Grayish-blue;
+$body-color : $Dark-grayish-blue;
 
 $custom-colors: (
   "primary-light": $pale-orange,
@@ -33,7 +34,7 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // CUSTOMIZE NAVBAR
-$link-color: $Grayish-blue;
+$link-color: $Dark-grayish-blue;
 $link-decoration: none;
 $link-hover-color: $very-vark-blue; 
 $navbar-brand-margin-end: 3rem;
