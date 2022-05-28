@@ -1,5 +1,4 @@
 import { getItems } from "./helper/getItems.js"
-
 export const registerThumbnailToggler = () => {
 
   const parseData = (data) => {
@@ -20,7 +19,7 @@ export const registerThumbnailToggler = () => {
   const addActiveToItem = (data) => {
     if (data.includes("product")) {
       const desktopImage = getItems("[data-desktop-image]")
-      const url = "public/images/image-" + data + ".jpg"
+      const url = parseData(desktopImage.getAttribute("src")) + "-" + data + ".jpg"
       desktopImage.setAttribute("src", url)
     } else {
       const selector = "[data-carousel-item='" + data + "']"
