@@ -1,0 +1,116 @@
+@use '../_custom.scss' as *;
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-button {
+  display: grid;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem 1.15625rem;
+  background-color: $white;
+  border-radius: 50%;
+  &.prev {
+    left: -1.15625rem;
+    &.btn-mobil {
+      left: 5%;
+    }
+  }
+  &.next {
+    right: -1.15625rem;
+    &.btn-mobil {
+      right: 5%;
+    }
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: -2.5rem;
+  right: .2rem;
+  background: none;
+}
+
+.count-wrapper,
+.btn-count,
+.add-to-cart-button,
+.checkout-button {
+  display: flex;
+}
+
+.count-wrapper,
+.add-to-cart-button {
+  border-radius: .376rem;
+}
+
+.count-wrapper {
+  justify-content: space-around;
+  column-gap: 2rem;
+  background-color: $Light-grayish-blue;
+  color: $very-vark-blue;
+  margin-top: 1rem;
+  overflow: hidden;
+  touch-action: manipulation;
+
+  span.number {
+    padding: 1.2rem 0;
+    @media (min-width: 992px) {
+      padding: .6rem 0;
+    } 
+  }
+  .btn-count {
+    align-items: center;
+    background-color: inherit;
+    width: 100%;
+    &.plus {
+      justify-content: flex-end;
+      margin-right: 1rem;
+    }
+    &.minus {
+      margin-left: 1rem;
+      img.minus-svg {
+        margin-top: .5rem;
+      }
+    }
+    &.minus, 
+    &.plus {
+      padding: 1.2rem .375rem;
+      @media (min-width: 992px) {
+        padding: .6rem .375rem;
+        margin-right: unset;
+        margin-left: unset;
+      }   
+    }
+  }
+}
+.add-to-cart-button {
+  column-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  color: $white;
+  padding: 1.2rem 2rem;
+  margin-top: 1rem;
+  @media (min-width: 768px) {
+    padding: .6rem 2rem;
+  }
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.8);
+    box-shadow: -5px 48px 64px -15px rgba($color: $primary, $alpha: 0.5);
+  }
+}
+.checkout-button {
+  align-items: center;
+  justify-content: stretch;
+  padding-top: 1rem;
+  .custom-button {
+    width: 100%;
+    color: $white;
+  }
+}
+

@@ -1,6 +1,24 @@
 @use '../_custom.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Kumbh+Sans:wght@700&display=swap');
 
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
 
 h1, 
 h2 {
@@ -13,11 +31,6 @@ h1 {
 }
 h2 {
   font-size: 1rem;
-  margin: 0;
-}
-
-p {
-  margin: 0;
 }
 
 p.subheading {
