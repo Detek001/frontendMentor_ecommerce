@@ -1,4 +1,4 @@
-import { getItems } from "./utilities/getItems.js"
+import { getItems } from "./helper/getItems.js"
 
 export const registerCart = () => {
   const eventListener = () => {

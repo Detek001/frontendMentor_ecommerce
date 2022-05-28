@@ -1,5 +1,5 @@
-import { operators } from "./utilities/operators.js"
-import { getItems } from "./utilities/getItems.js"
+import { operators } from "./helper/operators.js"
+import { getItems } from "./helper/getItems.js"
 
 export const registerAmountButton = () => {
 
