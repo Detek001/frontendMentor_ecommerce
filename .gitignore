@@ -1,5 +1,5 @@
-node_modules
-design
+node_modules/
+design/
 
 
 # Avoid your project being littered with annoying .DS_Store files!
