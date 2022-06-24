@@ -50,8 +50,8 @@ Users should be able to:
 - CSS Grid
 - JavaScript
 - Mobile-first workflow
-- [Bootstrap] (https://getbootstrap.com/)
-- [Parcel] (https://parceljs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Parcel](https://parceljs.org/)
 
 ### What I learned
 
